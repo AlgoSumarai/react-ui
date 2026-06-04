@@ -2,6 +2,28 @@
 import './Home.css'
 
 function Home() {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (!section) return
+
+    const start = window.pageYOffset
+    const target = section.getBoundingClientRect().top + start - 24
+    const distance = target - start
+    const duration = 900
+    let startTime = null
+
+    const ease = (t) => 1 - Math.pow(1 - t, 3)
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp
+      const time = Math.min(1, (timestamp - startTime) / duration)
+      window.scrollTo(0, start + distance * ease(time))
+      if (time < 1) window.requestAnimationFrame(step)
+    }
+
+    window.requestAnimationFrame(step)
+  }
+
   return (
     <main className="home-page">
       <section className="hero">
@@ -13,8 +35,12 @@ function Home() {
             and portfolio brands for fast-moving startups and creative teams.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href="#projects">View work</a>
-            <a className="secondary-button" href="#contact">Contact me</a>
+            <button className="primary-button" type="button" onClick={() => scrollToSection('projects')}>
+              View work
+            </button>
+            <button className="secondary-button" type="button" onClick={() => scrollToSection('contact')}>
+              Contact me
+            </button>
           </div>
         </div>
 
