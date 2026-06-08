@@ -88,44 +88,44 @@ function Home() {
         </p>
       </section>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '2rem' }}>
-        <section id="education">
-          <h2 className="section-heading">Education</h2>
-          <div className="project-grid">
-            <article className="project-card">
-              <div>
-                <h3 className="project-title">University of Johannesburg</h3>
-                <p className="project-text">
-                  Bachelor of Science in Information Technology
-                  <br />Auckland Park, Johannesburg
-                  <br />Feb. 2021 – Jul. 2025
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section id="experience">
-          <h2 className="section-heading">Experience</h2>
-          <div className="project-grid">
-            <article className="project-card">
-              <h3 className="project-title">Junior Software Engineer</h3>
+      
+      <section id="education" style={{ marginTop: '32px' }}>
+        <h2 className="section-heading">Education</h2>
+        <div className="project-grid">
+          <article className="project-card">
+            <div>
+              <h3 className="project-title">University of Johannesburg</h3>
               <p className="project-text">
-                TheRad · Remote | Sep. 2025 – Apr. 2026
+                Bachelor of Science in Information Technology
+                <br />Auckland Park, Johannesburg
+                <br />Feb. 2021 – Jul. 2025
               </p>
-              <p className="project-text">
-                • Solely developed a web-based learning platform with 26 math games using HTML, CSS, and JavaScript.
-                <br />• Assisted in building a modular ERP system for a manufacturing client with Laravel and Filament.
-                <br />• Maintained and debugged an existing Joomla/PHP production site, improving stability.
-                <br />• Gained experience across development, debugging, testing, and deployment.
-              </p>
-            </article>
-          </div>
-        </section>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      </div>
+      <section id="experience" style={{ marginTop: '32px' }}>
+        <h2 className="section-heading">Experience</h2>
+        <div className="project-grid">
+          <article className="project-card">
+            <h3 className="project-title">Junior Software Engineer</h3>
+            <p className="project-text">
+              TheRad · Remote | Sep. 2025 – Apr. 2026
+            </p>
+            <p className="project-text">
+              • Solely developed a web-based learning platform with 26 math games using HTML, CSS, and JavaScript.
+              <br />• Assisted in building a modular ERP system for a manufacturing client with Laravel and Filament.
+              <br />• Maintained and debugged an existing Joomla/PHP production site, improving stability.
+              <br />• Gained experience across development, debugging, testing, and deployment.
+            </p>
+          </article>
+        </div>
+      </section>
 
-      <section id="projects">
+      
+
+      <section id="projects" style={{ marginTop: '32px' }}>
         <h2 className="section-heading">Projects</h2>
         <ProjectsCarousel />
       </section>
