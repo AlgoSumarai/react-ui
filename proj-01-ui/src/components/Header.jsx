@@ -1,4 +1,5 @@
 import './Header.css'
+import { useState } from 'react'
 
 function Header() {
   const scrollToSection = (sectionId) => {
@@ -21,6 +22,14 @@ function Header() {
     }
 
     window.requestAnimationFrame(step)
+  }
+
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleNavClick = (sectionId, e) => {
+    if (e) e.preventDefault()
+    setMenuOpen(false)
+    scrollToSection(sectionId)
   }
 
   return (
@@ -59,17 +68,27 @@ function Header() {
           </rect>
         </svg>
       </a>
-      <nav className="header-nav">
-        <a className="header-link" href="" onClick={(e) => {scrollToSection('summary'); e.preventDefault()}}>
+      <button
+        className={`header-toggle ${menuOpen ? 'open' : ''}`}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        onClick={() => setMenuOpen((s) => !s)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
+        <a className="header-link" href="" onClick={(e) => handleNavClick('summary', e)}>
           Summary
         </a>
-        <a className="header-link" href="" onClick={(e) => {scrollToSection('experience'); e.preventDefault()}}>
+        <a className="header-link" href="" onClick={(e) => handleNavClick('experience', e)}>
           Experience
         </a>
-        <a className="header-link" href="" onClick={(e) => {scrollToSection('projects'); e.preventDefault()}}>
+        <a className="header-link" href="" onClick={(e) => handleNavClick('projects', e)}>
           Projects
         </a>
-        <a className="header-link" href="" onClick={(e) => {scrollToSection('skills'); e.preventDefault()}}>
+        <a className="header-link" href="" onClick={(e) => handleNavClick('skills', e)}>
           Skills
         </a>
       </nav>

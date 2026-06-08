@@ -46,6 +46,43 @@
   margin-right: 40px;
 }
 
+.header-toggle {
+  display: none;
+  margin-left: auto;
+  margin-right: 24px;
+  width: 56px; /* wider to keep bars from crowding */
+  min-width: 50px;
+  height: 52px; /* taller to give more vertical room */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 10px; /* increased gap for better visibility */
+}
+
+.header-toggle span {
+  display: block;
+  width: 26px; /* slightly wider bars */
+  height: 3px; /* thicker bars for visibility */
+  background: #cbd5e1;
+  border-radius: 3px;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.header-toggle.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.header-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-toggle.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
 .header-link {
   color: #cbd5e1;
   font-size: 0.95rem;
@@ -87,12 +124,26 @@
     padding: 16px 14px;
   }
 
+  .header-toggle { display: block; }
+
   .header-nav {
     width: 100%;
     justify-content: center;
     order: 2;
     margin: 10px 0 0;
+    display: none; /* hidden by default on small screens */
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(15,23,42,0.9);
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.5);
   }
+
+  .header-nav.open {
+    display: flex;
+  }
+
 
   .site-logo {
     margin-left: 0;
@@ -102,4 +153,10 @@
     font-size: 0.88rem;
     margin: 4px 6px;
   }
+}
+
+/* Ensure toggle is hidden on larger screens and nav is visible */
+@media (min-width: 641px) {
+  .header-toggle { display: none !important; }
+  .header-nav { display: flex !important; }
 }

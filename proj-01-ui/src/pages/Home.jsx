@@ -1,5 +1,6 @@
 
 import './Home.css'
+import ProjectsCarousel from '../components/ProjectsCarousel'
 
 function Home() {
   const scrollToSection = (sectionId) => {
@@ -125,63 +126,7 @@ function Home() {
 
       <section id="projects">
         <h2 className="section-heading">Projects</h2>
-        <div className="project-grid">
-          <article className="project-card">
-            <div>
-              <h3 className="project-title">KitchenBuddy API</h3>
-              <p className="project-text">
-                ASP.NET Core Web API using C#, Entity Framework, LINQ, and SQL to expose RESTful backend
-                endpoints for a recipe and kitchen management experience.
-              </p>
-            </div>
-            <p className="project-meta">ASP.NET Core · Web API · SQL Server</p>
-            <a className="project-link" href="https://github.com/AlgoSumarai/KitchenBuddy-API" target="_blank" rel="noreferrer">
-              View on GitHub
-            </a>
-          </article>
-
-          <article className="project-card">
-            <div>
-              <h3 className="project-title">OJGroceries</h3>
-              <p className="project-text">
-                Full-stack ASP.NET MVC e-commerce system with product listings, checkout flows, and
-                SQL-backed order management.
-              </p>
-            </div>
-            <p className="project-meta">ASP.NET MVC · C# · HTML · CSS · SQL</p>
-            <a className="project-link" href="https://github.com/AlgoSumarai/OJGroceries" target="_blank" rel="noreferrer">
-              View on GitHub
-            </a>
-          </article>
-
-          <article className="project-card">
-            <div>
-              <h3 className="project-title">Rhoo Transport Management System</h3>
-              <p className="project-text">
-                Capstone project featuring SQL-backed data models and backend business logic for a
-                transport operations system.
-              </p>
-            </div>
-            <p className="project-meta">Database design · backend logic · system architecture</p>
-            <a className="project-link" href="https://github.com/AlgoSumarai/Rhoo-Transport-Management-System" target="_blank" rel="noreferrer">
-              View on GitHub
-            </a>
-          </article>
-
-          <article className="project-card">
-            <div>
-              <h3 className="project-title">SnakeAI</h3>
-              <p className="project-text">
-                Reinforcement learning project using Python and PyTorch to implement training loops and
-                decision logic for an AI-controlled snake game.
-              </p>
-            </div>
-            <p className="project-meta">Python · PyTorch · AI · problem solving</p>
-            <a className="project-link" href="https://github.com/AlgoSumarai/SnakeAI" target="_blank" rel="noreferrer">
-              View on GitHub
-            </a>
-          </article>
-        </div>
+        <ProjectsCarousel />
       </section>
 
       <section id="skills">
