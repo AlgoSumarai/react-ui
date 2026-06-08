@@ -1,5 +1,6 @@
 
 import './Home.css'
+import graduationImage from '../assets/avatar/graduation_image.svg'
 import ProjectsCarousel from '../components/ProjectsCarousel'
 
 function Home() {
@@ -8,8 +9,8 @@ function Home() {
     if (!section) return
 
     const start = window.pageYOffset
-    const target = section.getBoundingClientRect().top + start - 24
-    const distance = target - start
+    const target = section.getBoundingClientRect().top + start - 50
+    const distance = target - start - 20
     const duration = 900
     let startTime = null
 
@@ -29,9 +30,9 @@ function Home() {
     <main id="top" className="home-page">
       <section className="hero">
         <div className="hero-copy-row">
-          <div className="hero-avatar">Avatar</div>
+          <img className="hero-avatar" src={graduationImage} alt="Graduation cap illustration" />
           <div className="hero-copy">
-            <p className="eyebrow">Resume & portfolio</p>
+            {/* <p className="eyebrow">Resume & portfolio</p> */}
             <h1 className="hero-title">Sennelo Mulanga Gundo</h1>
             <p className="hero-text">
               Graduate Software Engineer with hands-on experience in C#, ASP.NET MVC, .NET Web API, SQL,

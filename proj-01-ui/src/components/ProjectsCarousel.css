@@ -11,7 +11,7 @@
   display: flex;
   transition: transform 420ms cubic-bezier(.2,.9,.2,1);
   gap: 16px;
-  padding: 0; /* no side padding so one slide fills the view */
+  padding: 0  8px 0 10px; /* no side padding so one slide fills the view */
 }
 
 .carousel-slide {

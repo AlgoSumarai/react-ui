@@ -19,21 +19,16 @@
 }
 
 .hero-avatar {
-  height: 70%;
+  width: min(180px, 24vw);
+  height: auto;
   aspect-ratio: 1 / 1;
-  min-height: 120px;
   min-width: 120px;
+  min-height: 120px;
   border-radius: 28px;
   border: 1px solid rgba(148, 163, 184, 0.18);
   background: rgba(148, 163, 184, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #94a3b8;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-copy {
@@ -402,3 +397,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+#skills {
+  margin-top: 32px;
+} 
