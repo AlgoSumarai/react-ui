@@ -11,6 +11,31 @@
   padding: 36px 0 48px;
 }
 
+.hero-copy-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.hero-avatar {
+  height: 70%;
+  aspect-ratio: 1 / 1;
+  min-height: 120px;
+  min-width: 120px;
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(148, 163, 184, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
 .hero-copy {
   max-width: 740px;
 }
@@ -177,6 +202,18 @@
   font-size: 0.95rem;
 }
 
+.project-link {
+  display: inline-flex;
+  margin-top: 14px;
+  color: #a5b4fc;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: #ede9fe;
+}
+
 .contact-card {
   display: grid;
   gap: 16px;
@@ -208,6 +245,99 @@
   background: #6366f1;
   color: white;
   font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .home-page {
+    padding: 48px 18px 32px;
+  }
+
+  .hero {
+    gap: 22px;
+  }
+
+  .hero-copy-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-avatar {
+    width: min(160px, 25vw);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .hero-text {
+    max-width: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions button {
+    width: 100%;
+  }
+
+  .hero-stat-grid,
+  .feature-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid,
+  .project-grid {
+    gap: 18px;
+  }
+
+  .section-subtitle {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page {
+    padding: 32px 14px 24px;
+  }
+
+  .hero {
+    padding: 24px 0 32px;
+  }
+
+  .hero-avatar {
+    width: 140px;
+    min-width: 140px;
+  }
+
+  .hero-copy-row {
+    gap: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .header-nav {
+    justify-content: center;
+    gap: 14px;
+    margin-right: 12px;
+  }
+
+  .header-link {
+    font-size: 0.93rem;
+    margin: 0 6px;
+  }
 }
 
 .hero-visual {
