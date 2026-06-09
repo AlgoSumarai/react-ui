@@ -152,12 +152,12 @@ function Home() {
         <div>
           <h2 className="contact-title">Get in touch</h2>
           <p className="contact-text">
-            Email: mgsennelo@gmail.com
-            <br />Mobile: 069-794-9195
+            Email: <a href="mailto:mgsennelo@gmail.com" className="contact-link">mgsennelo@gmail.com</a>
+            <br />Mobile: <a href="tel:+27697949195" className="contact-link">069-794-9195</a>
           </p>
           <p className="contact-text">
-            GitHub: github.com/AlgoSumarai
-            <br />LinkedIn: linkedin.com/in/mulangasennelo
+            GitHub: <a href="https://github.com/AlgoSumarai" target="_blank" rel="noopener noreferrer" className="contact-link">github.com/AlgoSumarai</a>
+            <br />LinkedIn: <a href="https://linkedin.com/in/mulangasennelo" target="_blank" rel="noopener noreferrer" className="contact-link">linkedin.com/in/mulangasennelo</a>
           </p>
         </div>
         <a className="contact-link" href="mailto:mgsennelo@gmail.com">Send an email</a>
